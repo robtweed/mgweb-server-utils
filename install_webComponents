@@ -22,5 +22,5 @@ fi
 if [ ! -f "mg-webComponents.js" ]; then
   git clone https://github.com/robtweed/mg-webComponents
   mv mg-webComponents/mg-webComponents.js .
-  rm -r mg-webComponents
+  sudo rm -r mg-webComponents
 fi
