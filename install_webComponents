@@ -1,27 +1,26 @@
 #!/usr/bin/env bash
 
-if [ ! -f "/var/www/html/components" ]; then
-  mkdir /var/www/html/components
+if [ ! -f "components" ]; then
+  mkdir components
 fi
 
-if [ ! -f "/var/www/html/components/aminui" ]; then
-  mkdir /var/www/html/components/adminui
-  git clone https://github.com/robtweed/wc-admin-ui /var/www/html/components/adminui
+if [ ! -f "components/aminui" ]; then
+  mkdir components/adminui
+  git clone https://github.com/robtweed/wc-admin-ui components/adminui
 fi
 
-if [ ! -f "/var/www/html/components/leaflet" ]; then
-  mkdir /var/www/html/components/leaflet
-  git clone https://github.com/robtweed/wc-leaflet /var/www/html/components/leaflet
+if [ ! -f "components/leaflet" ]; then
+  mkdir components/leaflet
+  git clone https://github.com/robtweed/wc-leaflet components/leaflet
 fi
 
-if [ ! -f "/var/www/html/components/d3" ]; then
-  mkdir /var/www/html/components/d3
-  git clone https://github.com/robtweed/wc-admin-ui /var/www/html/components/d3
+if [ ! -f "components/d3" ]; then
+  mkdir components/d3
+  git clone https://github.com/robtweed/wc-admin-ui components/d3
 fi
 
-if [ ! -f "/var/www/html/mg-webComponents.js" ]; then
-  clone https://github.com/robtweed/mg-webComponents
-  mv /opt/mgweb/mg-webComponents/mg-webComponents.js /var/www/html/
-  rm -r /opt/mgweb/mg-webComponents
+if [ ! -f "mg-webComponents.js" ]; then
+  git clone https://github.com/robtweed/mg-webComponents
+  mv mg-webComponents/mg-webComponents.js .
+  rm -r mg-webComponents
 fi
-
