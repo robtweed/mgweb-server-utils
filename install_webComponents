@@ -1,20 +1,20 @@
 #!/usr/bin/env bash
 
-if [ ! -f "components" ]; then
+if [ ! -d "components" ]; then
   mkdir components
 fi
 
-if [ ! -f "components/aminui" ]; then
+if [ ! -d "components/aminui" ]; then
   mkdir components/adminui
   git clone https://github.com/robtweed/wc-admin-ui components/adminui
 fi
 
-if [ ! -f "components/leaflet" ]; then
+if [ ! -d "components/leaflet" ]; then
   mkdir components/leaflet
   git clone https://github.com/robtweed/wc-leaflet components/leaflet
 fi
 
-if [ ! -f "components/d3" ]; then
+if [ ! -d "components/d3" ]; then
   mkdir components/d3
   git clone https://github.com/robtweed/wc-admin-ui components/d3
 fi

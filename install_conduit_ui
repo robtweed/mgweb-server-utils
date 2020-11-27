@@ -1,9 +1,13 @@
 #!/usr/bin/env bash
 
 
-if [ ! -f "conduit-wc" ]; then
+if [ ! -d "conduit-wc" ]; then
   git clone https://github.com/robtweed/wc-conduit
-  mv wc-conduit/components .
+  if [ ! -d "conduit-wc/components" ]; then
+    mv wc-conduit/components .
+  else
+    mv wc-conduit/components/conduit components
+  fi
   mv wc-conduit/conduit-wc .
   sudo rm -r wc-conduit
 fi
