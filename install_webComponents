@@ -1,10 +1,10 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
-if [ ! -d "components" ]; then
+if [ ! -d "./components" ]; then
   mkdir components
 fi
 
-if [ ! -d "components/aminui" ]; then
+if [ ! -d "components/adminui" ]; then
   mkdir components/adminui
   git clone https://github.com/robtweed/wc-admin-ui components/adminui
 fi

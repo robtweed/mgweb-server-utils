@@ -3,7 +3,7 @@
 
 if [ ! -d "conduit-wc" ]; then
   git clone https://github.com/robtweed/wc-conduit
-  if [ ! -d "conduit-wc/components" ]; then
+  if [ ! -d "components" ]; then
     mv wc-conduit/components .
   else
     mv wc-conduit/components/conduit components
