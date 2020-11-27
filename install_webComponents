@@ -24,3 +24,8 @@ if [ ! -f "mg-webComponents.js" ]; then
   mv mg-webComponents/mg-webComponents.js .
   sudo rm -r mg-webComponents
 fi
+
+if [ ! -f "index.html" ]; then
+  mv mgweb-server-utils/index.html .
+fi
+
