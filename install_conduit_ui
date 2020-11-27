@@ -1,15 +1,19 @@
 #!/usr/bin/env bash
 
 
-if [ ! -f "/var/www/html/conduit-wc" ]; then
+if [ ! -f "conduit-wc" ]; then
   git clone https://github.com/robtweed/wc-conduit
   mv wc-conduit/components .
   mv wc-conduit/conduit-wc .
   sudo rm -r wc-conduit
 fi
 
-if [ ! -f "/var/www/html/mg-webComponents.js" ]; then
+if [ ! -f "mg-webComponents.js" ]; then
   git clone https://github.com/robtweed/mg-webComponents
   mv mg-webComponents/mg-webComponents.js .
   sudo rm -r mg-webComponents
+fi
+
+if [ ! -f "index.html" ]; then
+  mv mgweb-server-utils/index.html .
 fi
