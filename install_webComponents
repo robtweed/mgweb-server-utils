@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+
+if [ ! -f "/var/www/html/components" ]; then
+  mkdir /var/www/html/components
+fi
+
+if [ ! -f "/var/www/html/components/aminui" ]; then
+  mkdir /var/www/html/components/adminui
+  git clone https://github.com/robtweed/wc-admin-ui /var/www/html/components/adminui
+fi
+
+if [ ! -f "/var/www/html/components/leaflet" ]; then
+  mkdir /var/www/html/components/leaflet
+  git clone https://github.com/robtweed/wc-leaflet /var/www/html/components/leaflet
+fi
+
+if [ ! -f "/var/www/html/components/d3" ]; then
+  mkdir /var/www/html/components/d3
+  git clone https://github.com/robtweed/wc-admin-ui /var/www/html/components/d3
+fi
+
+if [ ! -f "/var/www/html/mg-webComponents.js" ]; then
+  clone https://github.com/robtweed/mg-webComponents
+  mv /opt/mgweb/mg-webComponents/mg-webComponents.js /var/www/html/
+  rm -r /opt/mgweb/mg-webComponents
+fi
+
